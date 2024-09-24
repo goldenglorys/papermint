@@ -607,6 +607,21 @@ files = [
 ]
 
 [[package]]
+name = "ordered-set"
+version = "4.1.0"
+description = "An OrderedSet is a custom MutableSet that remembers its order, so that every"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "ordered-set-4.1.0.tar.gz", hash = "sha256:694a8e44c87657c59292ede72891eb91d34131f6531463aab3009191c77364a8"},
+    {file = "ordered_set-4.1.0-py3-none-any.whl", hash = "sha256:046e1132c71fcf3330438a539928932caf51ddbc582496833e23de611de14562"},
+]
+
+[package.extras]
+dev = ["black", "mypy", "pytest"]
+
+[[package]]
 name = "packaging"
 version = "24.1"
 description = "Core utilities for Python packages"
@@ -957,6 +972,48 @@ files = [
 
 [package.extras]
 windows-terminal = ["colorama (>=0.4.6)"]
+
+[[package]]
+name = "pylatex"
+version = "1.4.2"
+description = "A Python library for creating LaTeX files and snippets"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "PyLaTeX-1.4.2.tar.gz", hash = "sha256:bb7b21bec57ecdba3f6f44c856ebebdf6549fd6e80661bd44fd5094236729242"},
+]
+
+[package.dependencies]
+ordered-set = "*"
+
+[package.extras]
+all = ["MarkupSafe (==2.0.1)", "alabaster (<0.7.12)", "black", "coverage", "isort", "jinja2 (<3.0)", "matplotlib", "numpy", "pytest (>=4.6)", "pytest-cov", "quantities", "sphinx", "twine"]
+docs = ["MarkupSafe (==2.0.1)", "alabaster (<0.7.12)", "jinja2 (<3.0)", "sphinx"]
+matplotlib = ["matplotlib"]
+matrices = ["numpy"]
+packaging = ["twine"]
+quantities = ["numpy", "quantities"]
+testing = ["black", "coverage", "isort", "pytest (>=4.6)", "pytest-cov"]
+
+[[package]]
+name = "pypdf2"
+version = "3.0.1"
+description = "A pure-python PDF library capable of splitting, merging, cropping, and transforming PDF files"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "PyPDF2-3.0.1.tar.gz", hash = "sha256:a74408f69ba6271f71b9352ef4ed03dc53a31aa404d29b5d31f53bfecfee1440"},
+    {file = "pypdf2-3.0.1-py3-none-any.whl", hash = "sha256:d16e4205cfee272fbdc0568b68d82be796540b1537508cef59388f839c191928"},
+]
+
+[package.extras]
+crypto = ["PyCryptodome"]
+dev = ["black", "flit", "pip-tools", "pre-commit (<2.18.0)", "pytest-cov", "wheel"]
+docs = ["myst_parser", "sphinx", "sphinx_rtd_theme"]
+full = ["Pillow", "PyCryptodome"]
+image = ["Pillow"]
 
 [[package]]
 name = "python-dateutil"
@@ -1381,4 +1438,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "d1d3b6699739614f4a5bf0b8f90aaeaf6a15fc95e4c0cc1ba922a5683666adf6"
+content-hash = "acba63ab3373a9e764423b2cbba5a38a224f922b77f0e038fab361672f1c36de"
